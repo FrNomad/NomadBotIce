@@ -1,7 +1,6 @@
 import discord
 import random
 
-token="ODEwNDgyNDQ1ODExODQzMDcy.YCkSmQ.dXEUJBKJDJnfagzqGS6eZ9oOjJw"
 hochul="얼음아"
 client = discord.Client()
 embedcolor = 0x2121E5
@@ -125,4 +124,4 @@ async def on_message(message):
                     await message.channel.send(f"{mt}, 당신입니다")
         
 
-client.run(token)
+client.run(os.environ['token'])
