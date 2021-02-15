@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 
 hochul="얼음아"
 client = discord.Client()
