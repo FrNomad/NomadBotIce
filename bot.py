@@ -86,7 +86,7 @@ async def on_message(message):
             elif msg in juew:
                 await message.channel.send(f"{mt}, 그분은 불운의 인물이자 되게 빡빡하심")
             elif msg in drobot:
-                await message.channel.send(f"{mt}, 드로봇 멍청이! 드로봇 세상에서 제일 멍청이! 드로봇 다중우주에서 제일 멍청이! 드로봇 뒤로 돌아섰더니 이우현이 단두대 준비하고있던 멍청이! 드로봇한테 누가 뭐 물어봤는데 기억도 못해서 멍청이 대우받는 멍청이!")
+                await message.channel.send(f"{mt}, 드로봇 멍청이!\n드로봇 세상에서 제일 멍청이!\n드로봇 다중우주에서 제일 멍청이!\n드로봇 뒤로 돌아섰더니 이우현이 단두대 준비하고있던 멍청이!\n드로봇한테 누가 뭐 물어봤는데 기억도 못해서 멍청이 대우받는 멍청이!")
             else:
                 if msg in message.author.name:
                     await message.channel.send(f"{mt}, 너")
@@ -124,7 +124,7 @@ async def on_message(message):
             elif msg in juew:
                 await message.channel.send(f"{mt}, 그분은 불운의 인물이자 되게 빡빡하신 분입니다.")
             elif msg in drobot:
-                await message.channel.send(f"{mt}, 드로봇 멍청이! 드로봇 세상에서 제일 멍청이! 드로봇 다중우주에서 제일 멍청이! 드로봇 뒤로 돌아섰더니 이우현이 단두대 준비하고있던 멍청이! 드로봇한테 누가 뭐 물어봤는데 기억도 못해서 멍청이 대우받는 멍청이!")
+                await message.channel.send(f"{mt}, 드로봇 멍청이!\n드로봇 세상에서 제일 멍청이!\n드로봇 다중우주에서 제일 멍청이!\n드로봇 뒤로 돌아섰더니 이우현이 단두대 준비하고있던 멍청이!\n드로봇한테 누가 뭐 물어봤는데 기억도 못해서 멍청이 대우받는 멍청이!")
             else:
                 if msg in message.author.name:
                     await message.channel.send(f"{mt}, 당신입니다")
