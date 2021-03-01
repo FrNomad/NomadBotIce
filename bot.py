@@ -25,6 +25,7 @@ flint=["플린트","파브릭","flintt","fabric"]
 mc=["마크","마인크래프트"]
 teasebot=["바보","멍청이","모자란애","멍청한애","바보멍청이"]
 juew=["juew","쥬","배준혁"]
+drobot=["김드로봇","드로봇"]
 #----------------------
 #-------임베드----------
 helpem = discord.Embed(title="얼음이와 노는 법",description="얼음이와 노는법을 정리해봤어요~~!", color=embedcolor)
@@ -84,6 +85,8 @@ async def on_message(message):
                 await message.channel.send(f"{mt}, 나 놀리지 말라고~ ㅠㅠ")
             elif msg in juew:
                 await message.channel.send(f"{mt}, 그분은 불운의 인물이자 되게 빡빡하심")
+            elif msg in drobot:
+                await message.channel.send(f"{mt}, 드로봇 멍청이! 드로봇 세상에서 제일 멍청이! 드로봇 다중우주에서 제일 멍청이! 드로봇 뒤로 돌아섰더니 이우현이 단두대 준비하고있던 멍청이! 드로봇한테 누가 뭐 물어봤는데 기억도 못해서 멍청이 대우받는 멍청이!")
             else:
                 if msg in message.author.name:
                     await message.channel.send(f"{mt}, 너")
@@ -120,6 +123,8 @@ async def on_message(message):
                 await message.channel.send(f"{mt}, 얼음봇 놀리지 마세요 ㅠㅠ")
             elif msg in juew:
                 await message.channel.send(f"{mt}, 그분은 불운의 인물이자 되게 빡빡하신 분입니다.")
+            elif msg in drobot:
+                await message.channel.send(f"{mt}, 드로봇 멍청이! 드로봇 세상에서 제일 멍청이! 드로봇 다중우주에서 제일 멍청이! 드로봇 뒤로 돌아섰더니 이우현이 단두대 준비하고있던 멍청이! 드로봇한테 누가 뭐 물어봤는데 기억도 못해서 멍청이 대우받는 멍청이!")
             else:
                 if msg in message.author.name:
                     await message.channel.send(f"{mt}, 당신입니다")
