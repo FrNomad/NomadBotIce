@@ -143,11 +143,13 @@ async def on_message(message):
                 for i in range(0, len(l2)):
                     time.sleep(subdly)
                     await message.channel.send(f"**[{l2n[i]}]** {l2[i]}")
+                await message.channel.send("여.기.까.지!")
             if line == "3호선":
                 await message.channel.send("**3호선을 외워볼까~요?**")
                 for i in range(0, len(l3)):
                     time.sleep(subdly)
                     await message.channel.send(f"**[{l3n[i]}]** {l3[i]}")
+                await message.channel.send("여.기.까.지!")
             else:
                 await message.channel.send("노선명에 오류가 있거나 입력되지 않은 노선이거나 존재하지 않는 노선입니다.");
 
