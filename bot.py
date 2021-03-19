@@ -45,7 +45,17 @@ l2n=["201","202","203","204","205","206","207","208","209","210","211","212","21
 l3=["대화","주엽","정발산","마두","백석","대곡","화정","원당","원흥","삼송","지축","구파발","연신내","불광","녹번","홍제","무악재","독립문","경복궁","안국","종로3가","을지로3가","충무로","동대입구","약수","금호","옥수","압구정","신사","잠원","고속터미널","교대","남부터미널","양재","매봉","도곡","대치","학여울","대청","일원","수서","가락시장","경찰병원","오금"]
 l3n=["309","310","311","312","313","314","315","316","317","318","319","320","321","322","323","324","325","326","327","328","329","330","331","332","333","334","335","336","337","338","339","340","341","342","343","344","345","346","347","348","349","350","351","352"]
 #----------------------
-
+#-------함수----------
+def linesend(linename,linestation,linenumber):
+    await message.channel.send(f"**{linename}을 외워볼까~요?**")
+    for i in range(0, len(linestation)):
+        if(stop):
+            break
+            stop = false
+        time.sleep(subdly)
+        await message.channel.send(f"**[{linenumber[i]}]** {linestation[i]}")
+    await message.channel.send("**여.기.까.지!**")
+#----------------------
 @client.event
 async def on_ready():
   await client.change_presence(status=discord.Status.online, activity=discord.Game("얼음아 도움말"))
@@ -140,22 +150,10 @@ async def on_message(message):
         if msg == "외워":
             line = args[2]
             if line == "2호선":
-                await message.channel.send("**2호선을 외워볼까~요?**")
-                for i in range(0, len(l2)):
-                    if(stop) break
-                    stop = false
-                    time.sleep(subdly)
-                    await message.channel.send(f"**[{l2n[i]}]** {l2[i]}")
-                await message.channel.send("**여.기.까.지!**")
+                linesend("2호선",l2,l2n)
             elif line == "3호선":
-                await message.channel.send("**3호선을 외워볼까~요?**")
-                for i in range(0, len(l3)):
-                    if(stop) break
-                    stop = false
-                    time.sleep(subdly)
-                    await message.channel.send(f"**[{l3n[i]}]** {l3[i]}")
-                await message.channel.send("**여.기.까.지!**")
-            elif len(args) == 2:
+                linesend("3호선",l3,l3n)
+            elif len(args) =< 2:
                 await message.channel.send("노선명을 기입하여 주십시오.");
             else:
                 await message.channel.send("노선명에 오류가 있거나 입력되지 않은 노선이거나 존재하지 않는 노선입니다.");
