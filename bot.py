@@ -9,6 +9,7 @@ embedcolor = 0x2121E5
 subdly = 0.3
 
 mode=0
+stop=false
 
 #-------명령-----------
 randomGreet = ["마크하고싶당","왜?","왜불러?","ㅖ?","살아있음 걱정 ㄴㄴ","호출했니?","나 불렀니?","호출했냐?","살아있다고!!!",
@@ -141,12 +142,16 @@ async def on_message(message):
             if line == "2호선":
                 await message.channel.send("**2호선을 외워볼까~요?**")
                 for i in range(0, len(l2)):
+                    if(stop) break
+                    stop = false
                     time.sleep(subdly)
                     await message.channel.send(f"**[{l2n[i]}]** {l2[i]}")
                 await message.channel.send("**여.기.까.지!**")
             elif line == "3호선":
                 await message.channel.send("**3호선을 외워볼까~요?**")
                 for i in range(0, len(l3)):
+                    if(stop) break
+                    stop = false
                     time.sleep(subdly)
                     await message.channel.send(f"**[{l3n[i]}]** {l3[i]}")
                 await message.channel.send("**여.기.까.지!**")
@@ -154,5 +159,8 @@ async def on_message(message):
                 await message.channel.send("노선명을 기입하여 주십시오.");
             else:
                 await message.channel.send("노선명에 오류가 있거나 입력되지 않은 노선이거나 존재하지 않는 노선입니다.");
+        if msg == "그만":
+            stop = true;
+            await message.channel.send("ㅖ, 그만 외울게요")
 
 client.run(os.environ['token'])
