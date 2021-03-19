@@ -137,7 +137,7 @@ async def on_message(message):
             line = args[2]
             if line == "2호선":
                 await message.channel.send("**2호선을 외워볼까~요?**")
-                for i in range(0, len(l2)):
+                for i in range(0, len(l2)-1):
                     time.sleep(0.4)
                     await message.channel.send(f"**[{l2n[i]]** {l2[i]}")
 
