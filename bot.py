@@ -161,6 +161,6 @@ async def on_message(message):
                 await message.channel.send("노선명에 오류가 있거나 입력되지 않은 노선이거나 존재하지 않는 노선입니다.");
         if msg == "그만":
             stop = true;
-            await message.channel.send("ㅖ, 그만 외울게요")
+            await message.channel.send(f"{mt}, 알겠슈, 그만 외울게요")
 
 client.run(os.environ['token'])
